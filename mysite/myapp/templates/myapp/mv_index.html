@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aliceblue;">
+    <h1 style="color: rgb(55, 9, 98);"><em>Nutritional Facts</em></h1>
+    <hr>
+    <div class="container">
+        {% for food in foodss %}
+        <div class="row">
+            <div class="col" style="background-color: rgb(107, 205, 205);">
+                <b>{{food.name}}</b>
+            </div>
+            <ul>               
+                <li><div class="col">
+                    Carbohydrate : {{food.carbs}} cal
+                </div></li>
+                <li><div class="col">
+                    Protein : {{food.protein}} g
+                </div></li>
+                <li><div class="col">
+                    Fats : {{food.fats}} g
+                </div></li>
+                <li><div class="col">
+                    Calories : {{food.calories}} g
+                </div></li>           
+            </ul>
+        </div>
+         <br>
+        {% endfor %}
+    </div>
+</body>
+</html>
